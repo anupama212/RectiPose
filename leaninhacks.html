@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proj</title>
+</head>
+<style>
+    .images {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  background-color: #106662;
+  border-radius: 7px;
+}
+
+img {
+  flex: 0 0 calc(40% - 1rem);
+  min-width: 0;
+  object-fit: contain;
+  object-position: top;
+
+}
+img:first-child {
+  margin-right: 6rem;
+  margin-left: 5rem;
+}
+body{
+    background-color: rgb(6, 53, 53);
+}
+</style>
+<body>
+    <div class="images">
+        <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" />
+        <img src="https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8eW9nYXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" /> 
+      </div>
+    <table style="width: 45%; margin: 55px auto;">
+        <thead style="font-family: 'Montserrat','Helvetica Neue',Helvetica,Arial,sans-serif; font-weight: normal; text-transform: uppercase; font-size: 22px; color: #ec91d6; background: #106662; text-align: center;">
+        <tr style="border: 1px solid #daabda; height: 25px;">
+        <td style="border: 1px solid #f0b6d6;" colspan="2">FEEDBACK</td>
+        </tr>
+        </thead>
+        <tbody style="text-align: center; font-size: 19px; color: #eb9ee0; border: 1px solid #caad50;">
+        <tr style="border: 1px solid #caad59; height: 25px;">
+        <td style="border: 1px solid #caad59;" width="55%"><strong>Head</strong></td>
+        <td style="border: 1px solid #caad59;" width="55%">-</td>
+        </tr>
+        <tr style="border: 1px solid #caad59; height: 25px;">
+        <td style="border: 1px solid #caad59;"><strong>Upper Body</strong></td>
+        <td style="border: 1px solid #caad59;">-</td>
+        </tr>
+        <tr style="border: 1px solid #caad59; height: 25px;">
+        <td style="border: 1px solid #caad59;"><strong>Lower Body</strong></td>
+        <td style="border: 1px solid #caad59;">-</td>
+        </tr>
+        <tr style="border: 1px solid #caad59; height: 25px;">
+        <td style="border: 1px solid #caad59;"><strong>Total</strong></td>
+        <td style="border: 1px solid #caad59;">-</td>
+        </tr>
+       </tbody>
+    </table> 
+    <style>b, strong {font-family: 'Montserrat', Helvetica, sans-serif;}</style>
+
+    <script src="three.js"></script>
+    <script>
+     const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+			const renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+
+			const geometry = new THREE.BoxGeometry();
+			const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			const cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+
+			camera.position.z = 5;
+
+			const animate = function () {
+				requestAnimationFrame( animate );
+
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
+
+				renderer.render( scene, camera );
+			};
+
+			animate();
+    </script>
+</body>
+</html>
