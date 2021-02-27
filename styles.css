@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo{
+    border-radius: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 12%;
+    width: auto;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #090909;
+    color: #ccc;
+}
+.home-page{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(20deg, rgb(76, 79, 99), black)
+}
+.side-1{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 35%;
+    height: 70%;
+    float: left;
+    padding: 50px;
+    background-color: #ededee;
+    color: black;
+    border-radius: 10px;
+    z-index: 100;
+}
+.side-1 .heading{
+    color: black;
+    font-size: 100px;
+    display: flex;
+}
+.side-1 .btn{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: 35px;
+    width: 20vw;
+    height: 10vh;
+    margin-top: 8vh;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.3s;
+    left: 15%;
+}
+.slider{
+    margin-left: 57vw;
+    margin-right: auto;
+}
